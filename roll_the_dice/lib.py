@@ -6,6 +6,7 @@
 from os.path import split
 import pandas as pd
 import datetime
+import random
 
 pd.set_option('display.width', 200)
 
@@ -48,6 +49,10 @@ def clean_data(data):
     return data
 
 
+def roll(num):
+    return random.randint(1, num)
+
+
 if __name__ == '__main__':
     # For introspections purpose to quickly get this functions on ipython
     import roll_the_dice
@@ -55,3 +60,4 @@ if __name__ == '__main__':
     df = pd.read_csv('{}/data/data.csv.gz'.format(folder_source))
     clean_data = clean_data(df)
     print(' dataframe cleaned')
+
