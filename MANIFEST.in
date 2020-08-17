@@ -1,0 +1,3 @@
+graft roll_the_dice
+global-exclude *.py[cod] __pycache__ *.so *.ipynb
+recursive-exclude  roll_the_dice/jupy *
